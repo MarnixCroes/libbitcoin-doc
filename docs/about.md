@@ -1,0 +1,1 @@
+Libbitcoin is C++ Bitcoin toolkit library.
