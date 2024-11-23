@@ -31,18 +31,14 @@ nav:
   - FAQ: FAQ.md
   - Guides: 
     - Running Libbitcoin:
-      - Run Binaries: section1/subsection/page3.md
-      - Build Source: section1/subsection/page3.md
+      - Download & Install: section1/subsection/page3.md
+      - Build From Source: section1/subsection/page3.md
       - Configuration Options: section1/subsection/page3.md
     - Connect Electrum: section1/subsection/page3.md
-  - Libbitcoin-blockchain:
-          - Page 1: section1/subsection/page3.md
   - Libbitcoin-build:
           - Page 1: section1/subsectionA/page1.md
           - Page 2: section1/subsectionA/page2.md
   - Libbitcoin-client:
-          - Page 3: section1/subsectionB/page3.md
-  - Libbitcoin-consensus:
           - Page 3: section1/subsectionB/page3.md
   - Libbitcoin-database:
           - Page 3: section1/subsectionB/page3.md
