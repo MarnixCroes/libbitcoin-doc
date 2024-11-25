@@ -26,7 +26,7 @@ theme:
         name: Light mode
 
 nav:
-  - Introduction: index.md
+  - Introduction: Introduction.md
   - About: about.md
   - FAQ: FAQ.md
   - Guides: 
@@ -37,11 +37,10 @@ nav:
     - Electrum: guides/Electrum.md
   - Libbitcoin-build:
           - Intro: libbitcoin-build/intro.md
-          - Page 2: section1/subsectionA/page2.md
   - Libbitcoin-client:
           - Intro: libbitcoin-client/intro.md
   - Libbitcoin-database:
-          - Intro: libbitcoin/database/intro.md
+          - Intro: libbitcoin-database/intro.md
   - Libbitcoin-explorer:
           - Intro: libbitcoin-explorer/intro.md
   - Libbitcoin-network:
