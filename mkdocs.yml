@@ -26,34 +26,33 @@ theme:
         name: Light mode
 
 nav:
-  - Introduction: index.md
+  - Introduction: Introduction.md
   - About: about.md
   - FAQ: FAQ.md
   - Guides: 
     - Running Libbitcoin:
-      - Download & Install: section1/subsection/page3.md
-      - Build From Source: section1/subsection/page3.md
-      - Configuration Options: section1/subsection/page3.md
-    - Connect Electrum: section1/subsection/page3.md
+      - Download & Install: guides/RunningLibbitcoin/Download&Install.md
+      - Build From Source: guides/RunningLibbitcoin/BuildFromSource.md
+      - Configuration Options: guides/ConfigurationOptions.md
+    - Electrum: guides/Electrum.md
   - Libbitcoin-build:
-          - Page 1: section1/subsectionA/page1.md
-          - Page 2: section1/subsectionA/page2.md
+          - Intro: libbitcoin-build/intro.md
   - Libbitcoin-client:
-          - Page 3: section1/subsectionB/page3.md
+          - Intro: libbitcoin-client/intro.md
   - Libbitcoin-database:
-          - Page 3: section1/subsectionB/page3.md
+          - Intro: libbitcoin-database/intro.md
   - Libbitcoin-explorer:
-          - Page 3: section1/subsectionB/page3.md
+          - Intro: libbitcoin-explorer/intro.md
   - Libbitcoin-network:
-          - Page 3: section1/subsectionB/page3.md
+          - Intro: libbitcoin-network/intro.md
   - Libbitcoin-node:
-          - Page 3: section1/subsectionB/page3.md
+          - Intro: libbitcoin-node/intro.md
   - Libbitcoin-protocol:
-          - Page 3: section1/subsectionB/page3.md
+          - Intro: libbitcoin-protocol/intro.md
   - Libbitcoin-server:
-          - Page 3: section1/subsectionB/page3.md
+          - Intro: libbitcoin-server/intro.md
   - Libbitcoin-system:
-          - Page 3: section1/subsectionB/page3.md
+          - Intro: libbitcoin-system/intro.md
 
 markdown_extensions:
   - admonition
