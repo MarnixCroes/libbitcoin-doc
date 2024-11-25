@@ -8,3 +8,8 @@ IBD is done in the following way:
 Libbitcoin connects to 100 peers and will request and validate block headers. Once it reaches the tip of the (strongest) header chain it will start downloading blocks from the peers. This is done in parrallel across the peers (the blocks don't have to be downloaded in order).
 
 Downloaded blocks will have some basic checks that don't require previous blocks: block size *(insert rest)*. 
+
+### Does Libbitcoin support Taproot?
+
+No, Taproot is currently not supported.
+This is on the roadmap.
