@@ -43,6 +43,7 @@ nav:
           - Intro: libbitcoin-database/intro.md
   - Libbitcoin-explorer:
           - Intro: libbitcoin-explorer/intro.md
+          - Commands: libbitcoin-explorer/commands.md
   - Libbitcoin-network:
           - Intro: libbitcoin-network/intro.md
   - Libbitcoin-node:
