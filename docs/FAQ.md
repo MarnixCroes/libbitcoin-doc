@@ -19,3 +19,8 @@ The two main reason are:
 Libbitcoin does not currently have a mining interface, although anyone is free to build on top of/using Libbitcoin.
 
 Implementing a mining interface is a future plan.
+
+### Does Libbitcoin have a GUI?
+
+No, Libbitcoin does not have a Graphical User Interface.
+However, Libbitcoin can build an Electrum index which can be used to connect a (GUI) wallet, like Electrum.
