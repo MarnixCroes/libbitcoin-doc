@@ -13,6 +13,8 @@ A minimal libbitcoin build requires boost and libsecp256k1.
 ZeroMQ is needed for client and/or server.
 ICU (International Components for Unicode) is required for libbitcoin-explorer.
 
+![](/assets/dependenciesgraph.png)
+
 ### Does Libbitcoin support pruning?
 
 No, Libbitcoin does not allow to prune the chain.
