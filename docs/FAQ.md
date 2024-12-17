@@ -34,3 +34,8 @@ Implementing a mining interface is a future plan.
 
 No, Libbitcoin does not have a Graphical User Interface.
 However, Libbitcoin can build an Electrum index which can be used to connect a (GUI) wallet, like Electrum.
+
+### What is the policy of a Libbitcoin node?
+
+The Bitcoin P2P network does not implement consensus rules, therefore Libbitcoin only has minimum fee rules to protect against DoS attacks.
+
