@@ -34,3 +34,15 @@ Implementing a mining interface is a future plan.
 
 No, Libbitcoin does not have a Graphical User Interface.
 However, Libbitcoin can build an Electrum index which can be used to connect a (GUI) wallet, like Electrum.
+
+### What build system does Libbitcoin use?
+
+Libbitcoin supports multiple build systems:
+
+- Autotools
+- CMake (CMake Lists & CMake presets)
+- MSBuild
+
+GCC and Clang are officially supported and tested for the Autotools and CMake builds.
+
+The MSBuild supports Microsoft Visual Studio Code (MSVC) on Linux, macOS and Windows.
