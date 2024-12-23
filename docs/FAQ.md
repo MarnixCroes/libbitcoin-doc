@@ -34,3 +34,16 @@ Implementing a mining interface is a future plan.
 
 No, Libbitcoin does not have a Graphical User Interface.
 However, Libbitcoin can build an Electrum index which can be used to connect a (GUI) wallet, like Electrum.
+
+### I've heard about the Milk Sad vulnerability, does this mean Libbitcoin is unsafe?
+
+The [Milk Sad vulnerability](https://github.com/libbitcoin/libbitcoin-explorer/wiki/CVE-2023-39910) was about the _bx seed_ command using a weak Pseudo-Random Number Generator (PRNG).
+
+The command was supposed to be used for testing purposes, as randomness from the Operating System should not be considered secure.
+The documentation always clearly stated this.
+However, some external resources used the command as example for generating seeds without mentioning this.
+As a result, money got stolen from these low entropy seeds.
+
+The command has been removed to prevent further misuse.
+
+> This vulnerability never affected Libbitcoin as an full node implementation.
