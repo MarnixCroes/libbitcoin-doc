@@ -1,5 +1,5 @@
 site_name: Libbitcoin Docs
-copyright: MIT
+copyright: GNU FDL
 theme:
   name: material
   logo: assets/libbitcoin-logo.svg
