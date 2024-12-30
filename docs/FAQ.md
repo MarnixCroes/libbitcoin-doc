@@ -1,5 +1,30 @@
 # Frequently Asked Questions
 
+### How is Libbitcoin different from Bitcoin Core?
+
+_Libbitcoin_ and _Bitcoin Core_ are two different implementations of the Bitcoin protocol.
+
+The main architectural differences are:
+
+- *Libbitcoin is a developer toolkit, with a modular design*
+
+Libbitcoin has several separate libraries that can be used independently, meaning that things like node, network and database are separate from each other.
+Whereas Bitcoin Core has a monolithic architecture where everything is in the same codebase and interconnected.
+
+- *Libbitcoin focuses on performance and scaling of the software*
+
+Libbitcoin has an asynchronous design that allows for efficient event-driven actions and parallelism. 
+Better hardware and bandwidth results in better node performance (like faster IBD). 
+This makes the software scalable and future proof (as hardware specs and bandwidth keep increasing (Moore's Law)).
+
+- *No UTXO set*
+
+Libbitcoin does not store a UTXO set (like Bitcoin Core) but stores the full indexed chain.
+
+- *Libbitcoin keeps it minimal*
+
+Things like new wallet features and GUI's are not being worked on, they can be built on top of or used with Libbitcoin but are not part of Libbitcoin itself.
+
 ### Does Libbitcoin support Taproot?
 
 No, Taproot is currently not supported.
