@@ -5,6 +5,14 @@
 No, Taproot is currently not supported.
 This is on the roadmap.
 
+### How to run a Libbitcoin node?
+
+Install the required dependencies: boost & libsecp256k1.
+
+Build the required libraries: libbitcoin-system, libbitcoin-network, libbitcoin-database & libbitcoin-node.
+
+Then run the resulting bn executable.
+
 ### What are the dependencies?
 
 Libbitcoin uses as few dependencies as possible:
