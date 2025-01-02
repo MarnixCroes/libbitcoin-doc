@@ -39,3 +39,8 @@ However, Libbitcoin can build an Electrum index which can be used to connect a (
 
 The Bitcoin P2P network does not implement consensus rules, therefore Libbitcoin only has minimum fee rules to protect against DoS attacks.
 
+## Can Libbitcoin be used on testnet/regtest?
+
+Yes, Libbitcoin can be used on both testnet3 and regtest.
+To use on testnet3 set `forks.difficult` setting to `false`, for regtest set `forks.retarget` setting to `false`.
+Libbitcoin does currently not support testnet4 or signet.
