@@ -39,3 +39,6 @@ However, Libbitcoin can build an Electrum index which can be used to connect a (
 
 The Bitcoin P2P network does not implement consensus rules, therefore Libbitcoin only has minimum fee rules to protect against DoS attacks.
 
+### How does Libbitcoin work without a UTXO set?
+
+Libbitcoin stores the fully indexed chain.
