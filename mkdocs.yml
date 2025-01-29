@@ -32,6 +32,7 @@ nav:
   - FAQ: FAQ.md
   - Guides: 
     - Running Libbitcoin:
+      - Run Libbitcoin Node: guides/RunningLibbitcoin/RunNode.md
       - Download & Install: guides/RunningLibbitcoin/Download&Install.md
       - Build From Source: guides/RunningLibbitcoin/BuildFromSource.md
       - Configuration Options: guides/ConfigurationOptions.md
