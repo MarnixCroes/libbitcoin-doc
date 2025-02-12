@@ -39,3 +39,11 @@ However, Libbitcoin can build an Electrum index which can be used to connect a (
 
 The Bitcoin P2P network does not implement consensus rules, therefore Libbitcoin only has minimum fee rules to protect against DoS attacks.
 
+### What are the minimal requirements to run Libbitcoin?
+
+Libbitcoin is offically supported and tested on Ubuntu 24.04, macOS 14.7.2 and Windows 10.0.20348.
+
+It should run on as low as 8 GiB RAM, however Libbitcoin does not spend resources on supporting lower level hardware.
+
+32 GiB RAM minimum is recommended.
+1 TB disk is required to store the chain.
