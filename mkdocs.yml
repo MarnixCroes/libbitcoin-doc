@@ -1,10 +1,11 @@
 site_name: Libbitcoin Docs
-copyright: MIT
+copyright: GNU FDL
 theme:
   name: material
   logo: assets/libbitcoin-logo.svg
   icon:
     repo: fontawesome/brands/github
+
   palette:
 
     # Palette toggle for light mode
@@ -64,13 +65,15 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
 extra:
-  version:
-    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/marnixcroes/libbitcoin-doc
+    - icon: fontawesome/brands/github
+      link: https://github.com/libbitcoin
 
 extra_javascript:
   - https://kit.fontawesome.com/090ca49637.js
   - js/external-links.js
 
 extra_css:
-  - css/external-links.css
   - css/blockquote-cite.css

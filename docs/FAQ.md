@@ -2,8 +2,8 @@
 
 ### Does Libbitcoin support Taproot?
 
-No, Taproot is currently not supported.
-This is on the roadmap.
+Taproot is currently not supported.
+The Libbitcoin v4 release will include Taproot support.
 
 ### What are the dependencies?
 
@@ -46,3 +46,16 @@ Libbitcoin supports multiple build systems:
 GCC and Clang are officially supported and tested for the Autotools and CMake builds.
 
 The MSBuild supports Microsoft Visual Studio Code (MSVC) on Linux, macOS and Windows.
+
+### What is the policy of a Libbitcoin node?
+
+The Bitcoin P2P network does not implement consensus rules, therefore Libbitcoin only has minimum fee rules to protect against DoS attacks.
+
+### What are the minimal requirements to run Libbitcoin?
+
+Libbitcoin is offically supported and tested on Ubuntu 24.04, macOS 14.7.2 and Windows 10.0.20348.
+
+It should run on as low as 8 GiB RAM, however Libbitcoin does not spend resources on supporting lower level hardware.
+
+32 GiB RAM minimum is recommended.
+1 TB disk is required to store the chain.
