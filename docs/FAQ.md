@@ -53,7 +53,7 @@ The Bitcoin P2P network does not implement consensus rules, therefore Libbitcoin
 
 ### What are the minimal requirements to run Libbitcoin?
 
-Libbitcoin is offically supported and tested on Ubuntu 24.04, macOS 14.7.2 and Windows 10.0.20348.
+Libbitcoin is offically supported and tested on Ubuntu 24.04, latest macOS and latest Windows.
 
 It should run on as low as 8 GiB RAM, however Libbitcoin does not spend resources on supporting lower level hardware.
 
