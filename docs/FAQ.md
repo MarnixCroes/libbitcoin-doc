@@ -37,7 +37,7 @@ However, Libbitcoin can build an Electrum index which can be used to connect a (
 
 ### How does a libbitcoin node bootstrap, does it use seed nodes?
 
-By default, a Libbitcoin node will connect to the default DNS names, which point to _libbitcoin.net_.
+By default, a Libbitcoin node will connect to the default DNS names, which point to _libbitcoin.net_ (which currently are offline).
 
 If specified, it will connect to the configured peers, which can be IP addresses or DNS names and port.
 The seed nodes and manual nodes can be specified in the config file and/or prepopulated in the address cache file with the same values.
