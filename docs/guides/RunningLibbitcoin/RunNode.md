@@ -2,8 +2,10 @@
 
  Instructions how to run a Libbitcoin node
 
-_Running a Libbitcoin node by using `bn` is aimed for developers. A Libbitcoin Server should be run for production, it contains the Bitcoin node and address indexing and a client-server interface._
+!!! warning
+    Running a Libbitcoin node by using `bn` should only be used by developers/for testing purposes. A Libbitcoin Server should be run for production, it contains the Bitcoin node and address indexing and a client-server interface._
 
+> This guide is for people who want to test Libbitcoin v4
 ## Debian/Ubuntu
 
 ### Using install.sh
