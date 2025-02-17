@@ -35,6 +35,15 @@ Implementing a mining interface is a future plan.
 No, Libbitcoin does not have a Graphical User Interface.
 However, Libbitcoin can build an Electrum index which can be used to connect a (GUI) wallet, like Electrum.
 
+### How does a libbitcoin node bootstrap, does it use seed nodes?
+
+By default, a Libbitcoin node will connect to the default DNS names, which point to _libbitcoin.net_ (which currently are offline).
+
+If specified, it will connect to the configured peers, which can be IP addresses or DNS names and port.
+The seed nodes and manual nodes can be specified in the config file and/or prepopulated in the address cache file with the same values.
+The node won't start unless it has 500 (connect batch size (5) * outbound connections (100)) unique addresses in the cache, either from seeding or otherwise.
+Seeding is bypassed if the address cache is sufficiently populated, and the seed nodes are dropped once seeding has completed.
+
 ### What build system does Libbitcoin use?
 
 Libbitcoin supports multiple build systems:
