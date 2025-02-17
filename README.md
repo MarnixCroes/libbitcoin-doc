@@ -1,21 +1,21 @@
 # Libbitcoin Docs
 
-Documentation for [libbitcoin). Built using mkdocs material theme.
+Documentation for Libbitcoin. Built using mkdocs material theme.
 
 ### Install
 ```
-pip install mkdocs
-pip install mkdocs-material
-```
-
-### Run
-```
-mkdocs serve
+sudo apt-get install mkdocs
+sudo apt-get install mkdocs-material
 ```
 
 ### Build
 ```
 mkdocs build
+```
+
+### Run
+```
+mkdocs serve
 ```
 
 ## License
