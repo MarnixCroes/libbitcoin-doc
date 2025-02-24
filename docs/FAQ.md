@@ -93,3 +93,21 @@ It should run on as low as 8 GiB RAM, however Libbitcoin does not spend resource
 
 32 GiB RAM minimum is recommended.
 1 TB disk is required to store the chain.
+
+### How does a Libbitcoin node manage peers?
+
+By default, a Libbitcoin node targets to have 100 outbound connections, and has 0 inbound connections (disabled).
+
+New outbound connections are made in batches of 5 (default), where the first one to complete the handshake gets connected and the others get dropped.
+
+New connection establishments have a time limit of 5 seconds (default), peers that fail to establish a connection within this time are dropped.
+
+Stalled channels are dropped. A channel is considered stalled after 10 seconds (default) of inactivity.
+
+Slow channel(s) are also dropped. A channel is considered slow if the underperformance to the standard deviation is 1.5 (default) or more.
+
+Download rates are measured for each channel to perform standard deviation computation across all of them (can be disabled).
+
+Specified peers (in the config) will be reconnected on drop.
+
+Seed nodes are dropped after completion or time-out.
