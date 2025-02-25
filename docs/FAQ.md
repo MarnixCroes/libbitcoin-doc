@@ -111,3 +111,5 @@ Download rates are measured for each channel to perform standard deviation compu
 Specified peers (in the config) will be reconnected on drop.
 
 Seed nodes are dropped after completion or time-out.
+
+A peer is immediately dropped if it violates the protocol or exceeds resource limits. Libbitcoin does not use a banning mechanism.
