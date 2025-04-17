@@ -41,6 +41,5 @@ The Bitcoin P2P network does not implement consensus rules, therefore Libbitcoin
 
 ## Can Libbitcoin be used on testnet/regtest?
 
-Yes, Libbitcoin can be used on both testnet3 and regtest.
-To use on testnet3 set `forks.difficult` setting to `false`, for regtest set `forks.retarget` setting to `false`.
+Yes, Libbitcoin supports both testnet3 and regtest.
 Libbitcoin does currently not support testnet4 or signet.
