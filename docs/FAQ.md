@@ -89,7 +89,7 @@ The Bitcoin P2P network does not implement consensus rules, therefore Libbitcoin
 
 Libbitcoin is offically supported and tested on Ubuntu 24.04, latest macOS and latest Windows.
 
-It should run on as low as 8 GiB RAM, however Libbitcoin does not spend resources on supporting lower level hardware.
+It should run on as low as 8 GiB RAM, however Libbitcoin contributors do not spend time and resources on supporting lower level hardware as this hardware will become obsolete in the near future.
 
 32 GiB RAM minimum is recommended.
 1 TB disk is required to store the chain.
