@@ -36,7 +36,7 @@ Libbitcoin uses as few dependencies as possible:
 
 A minimal libbitcoin build requires boost and libsecp256k1. 
 ZeroMQ is needed for client and/or server.
-ICU (International Components for Unicode) is required for libbitcoin-explorer.
+ICU (International Components for Unicode) is an optional dependency which is only required when BIP 38 and BIP 39 are being used with libbitcoin-explorer.
 
 ![](/assets/dependenciesgraph.png)
 
