@@ -92,7 +92,7 @@ The MSBuild supports Microsoft Visual Studio Code (MSVC) on Linux, macOS and Win
 
 The Bitcoin P2P network does not implement consensus rules, therefore Libbitcoin only has minimum fee rules to protect against DoS attacks.
 
-## Can Libbitcoin be used on testnet/regtest?
+### Can Libbitcoin be used on testnet/regtest?
 
 Yes, Libbitcoin supports both testnet3 and regtest.
 Libbitcoin does currently not support testnet4 or signet.
