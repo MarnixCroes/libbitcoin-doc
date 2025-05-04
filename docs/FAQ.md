@@ -82,11 +82,10 @@ Libbitcoin supports multiple build systems:
 
 - Autotools
 - CMake (CMake Lists & CMake presets)
-- MSBuild
+- VSCode
+- Visual C++ (MSVC) (Windows)
 
-GCC and Clang are officially supported and tested for the Autotools and CMake builds.
-
-The MSBuild supports Microsoft Visual Studio Code (MSVC) on Linux, macOS and Windows.
+GCC and Clang are officially supported and tested for these build systems.
 
 ### What is the policy of a Libbitcoin node?
 
