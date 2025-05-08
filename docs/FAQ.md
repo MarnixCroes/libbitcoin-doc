@@ -27,8 +27,7 @@ Things like new wallet features and GUI's are not being worked on, they can be b
 
 ### Does Libbitcoin support Taproot?
 
-Taproot is currently not supported.
-The Libbitcoin v4 release will include Taproot support.
+Yes, Taproot is supported since Libbitcoin version v4.
 
 ### What are the dependencies?
 
