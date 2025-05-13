@@ -125,3 +125,8 @@ Specified peers (in the config) will be reconnected on drop.
 Seed nodes are dropped after completion or time-out.
 
 A peer is immediately dropped if it violates the protocol or exceeds resource limits. Libbitcoin does not use a banning mechanism.
+
+### How does Libbitcoin handle soft/hard forks?
+
+Any fork, both soft and hard forks, are configuration options.
+Users are never forced to accept a fork when upgrading the software.
