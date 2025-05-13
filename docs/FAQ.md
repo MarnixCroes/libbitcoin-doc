@@ -124,3 +124,13 @@ Specified peers (in the config) will be reconnected on drop.
 Seed nodes are dropped after completion or time-out.
 
 A peer is immediately dropped if it violates the protocol or exceeds resource limits. Libbitcoin does not use a banning mechanism.
+
+### What are the executables?
+
+There are 3 executables:
+
+- `bs` is the Bitcoin-Server.
+- `bx` is the Bitcoin-Explorer.
+- `bn` is the Bitcoin-Node.
+
+Note that `bn` is part of Bitcoin-Server, and it's execution is for developer and/or testing purposes.
