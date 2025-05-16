@@ -134,3 +134,8 @@ There are 3 executables:
 - `bn` is the Bitcoin-Node.
 
 Note that `bn` is part of Bitcoin-Server, and it's execution is for developer and/or testing purposes.
+
+### How does Libbitcoin handle soft/hard forks?
+
+Any fork, both soft and hard forks, are configuration options.
+Users are never forced to accept a fork when upgrading the software.
