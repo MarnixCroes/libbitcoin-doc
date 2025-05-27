@@ -97,8 +97,15 @@ Libbitcoin does currently not support testnet4 or signet.
 
 ### What are the minimal requirements to run Libbitcoin?
 
+#### Operating System
 Libbitcoin is offically supported and tested on Ubuntu 24.04, latest macOS and latest Windows.
 
+#### Dependencies
+- Boost: 1.86.0
+- secp256k1: v0.5.1
+- ICU: 55.2 (optional dependency)
+
+#### Hardware
 It should run on as low as 8 GiB RAM, however Libbitcoin contributors do not spend time and resources on supporting lower level hardware as this hardware will become obsolete in the near future.
 
 32 GiB RAM minimum is recommended.
