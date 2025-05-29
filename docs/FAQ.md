@@ -42,3 +42,6 @@ The Bitcoin P2P network does not implement consensus rules, therefore Libbitcoin
 ### How does Libbitcoin work without a UTXO set?
 
 Libbitcoin stores the fully indexed chain.
+
+It is a common misconception that Bitcoin uses a UTXO set.
+Bitcoin uses blocks, a UTXO set is an (Bitcoin Core) implementation specific concept.
