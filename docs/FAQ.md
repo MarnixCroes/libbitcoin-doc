@@ -90,6 +90,13 @@ GCC and Clang are officially supported and tested for these build systems.
 
 The Bitcoin P2P network does not implement consensus rules, therefore Libbitcoin only has minimum fee rules to protect against DoS attacks.
 
+### How does Libbitcoin work without a UTXO set?
+
+Libbitcoin stores the fully indexed chain.
+
+It is a common misconception that Bitcoin uses a UTXO set.
+Bitcoin uses blocks, a UTXO set is an (Bitcoin Core) implementation specific concept.
+
 ### Can Libbitcoin be used on testnet/regtest?
 
 Yes, Libbitcoin supports both testnet3 and regtest.
