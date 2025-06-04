@@ -29,6 +29,8 @@ Things like new wallet features and GUI's are not being worked on, they can be b
 
 Yes, Taproot is supported since Libbitcoin version 4.
 
+> Wallet functionalities such as P2TR address generation and transaction building are not yet supported.
+
 ### What are the dependencies?
 
 Libbitcoin uses as few dependencies as possible:
