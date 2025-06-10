@@ -159,9 +159,10 @@ Note that `bn` is part of Bitcoin-Server, and it's execution is for developer an
 Any fork, both soft and hard forks, are configuration options.
 Users are never forced to accept a fork when upgrading the software.
 
-### Does Libbitcoin contain wallet functionalities?
+### Does Libbitcoin have a wallet?
 
-Libbitcoin for end users (those who run Libbitcoin Server or Libbitcoin Explorer) does not contain wallet functionalities.
+Libbitcoin does not have a wallet.
 
-However, the `libbitcoin-system` library does contain wallet functionalities like the generation of private keys, addresses, mnemonics, bitcoin URI encoding etc.
-These can be used by developers.
+However, Libbitcoin System and Libbitcoin Explorer do have commands like the generation of private keys, addresses, mnemonics, bitcoin URI encoding etc.
+
+These functionalities in the `libbitcoin-system` library may be used by developers, whereas the commands in Libbitcoin Explorer can be used by end users.
