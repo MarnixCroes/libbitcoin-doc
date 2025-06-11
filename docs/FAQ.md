@@ -171,3 +171,9 @@ These functionalities in the `libbitcoin-system` library may be used by develope
 
 > To use a Libbitcoin node with a wallet, an Electrum index can be used to connect a wallet.
 
+### Does Libbitcoin have a RPC interface?
+
+No, Libbitcoin does not have a RPC interface.
+
+Libbitcoin Server contains a Client Server Interface, using [ZeroMQ](https://zeromq.org/), that enables queries.
+
