@@ -65,7 +65,7 @@ Implementing a mining interface is a future plan.
 ### Does Libbitcoin have a GUI?
 
 No, Libbitcoin does not have a Graphical User Interface.
-However, Libbitcoin can build an Electrum index which can be used to connect a (GUI) wallet, like Electrum.
+However, Libbitcoin can build an Electrum index which can be used to connect a GUI (wallet), like Electrum.
 
 ### Does a different node implementation, like Libbitcoin, have unintentional chain split risk?
 
