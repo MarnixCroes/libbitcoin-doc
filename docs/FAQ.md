@@ -166,3 +166,6 @@ Libbitcoin does not have a wallet.
 However, Libbitcoin System and Libbitcoin Explorer do have commands like the generation of private keys, addresses, mnemonics, bitcoin URI encoding etc.
 
 These functionalities in the `libbitcoin-system` library may be used by developers, whereas the commands in Libbitcoin Explorer can be used by end users.
+
+> To use a Libbitcoin node with a wallet, an Electrum index can be used to connect a wallet.
+
