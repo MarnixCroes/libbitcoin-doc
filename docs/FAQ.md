@@ -42,6 +42,8 @@ Build the required libraries: libbitcoin-system, libbitcoin-network, libbitcoin-
 
 Then run the resulting `bn` executable.
 
+See step-by-step instructions [here](/guides/RunningLibbitcoin/RunNode/).
+
 ### What are the dependencies?
 
 Libbitcoin uses as few dependencies as possible:
