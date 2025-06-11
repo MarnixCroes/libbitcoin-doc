@@ -7,11 +7,14 @@ This is on the roadmap.
 
 ### How to run a Libbitcoin node?
 
+> To run a Libbitcoin node, a Libbitcoin Server should be run.
+However, as the Server is still a work in progress, solely the node can be run for testing purposes.
+
 Install the required dependencies: boost & libsecp256k1.
 
 Build the required libraries: libbitcoin-system, libbitcoin-network, libbitcoin-database & libbitcoin-node.
 
-Then run the resulting bn executable.
+Then run the resulting `bn` executable.
 
 ### What are the dependencies?
 
