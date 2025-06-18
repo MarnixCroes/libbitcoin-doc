@@ -27,22 +27,4 @@ The `--prefix` is where the _bin_, _etc_, _include_ and _lib_ and _share_ direct
 
 _bin_ contains the `bn` executable, _etc_ contains the _bn.cfg_ file, which is an example config file (changing values here will not take effect).
 
-The `bn` can be executed, however it will not be able to connect to the Bitcoin network as the default seed nodes currently do not work.
-To connect to the Bitcoin network create a config file with specified seed nodes or use a prepopulated hosts.cache file (which contains peers).
-
-- Config file:
-Create a config file, for example called _bn.cfg_, and specify seed node(s):
-
-```
-[network]
-seed = ip:port
-seed = host:port
-```
-
-- host.cache file:
-Have a preppopulated hosts.cache file in _~/libbitcoin-node/prefix/bin/_
-
-Then run the `bn` executable with specifying the config file, for example:
-`./bn --config=/home/user/Documents/bn.cfg`
-
-Now the node should start and create outbound connections.
+Now run the `bn` executable and the node will start and create outbound connections.
