@@ -107,9 +107,11 @@ Libbitcoin supports multiple build systems:
 
 GCC and Clang are officially supported and tested for these build systems.
 
-### What is the policy of a Libbitcoin node?
+### What is the transaction relay policy of a Libbitcoin node?
 
 The Bitcoin P2P network does not implement consensus rules, therefore Libbitcoin only has minimum fee rules to protect against DoS attacks.
+
+> Currently, a Libbitcoin node does not relay any transactions. Transaction relay is a WIP.
 
 ### How does Libbitcoin work without a UTXO set?
 
