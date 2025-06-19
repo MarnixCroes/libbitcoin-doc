@@ -49,7 +49,11 @@ nav:
   - Libbitcoin-network:
           - Intro: libbitcoin-network/intro.md
   - Libbitcoin-node:
-          - Intro: libbitcoin-node/intro.md
+    - Intro: libbitcoin-node/intro.md
+    - Build:
+      - Linux: libbitcoin-node/Build/Linux.md
+      - macOS: libbitcoin-node/Build/macOS.md
+      - Windows: libbitcoin-node/Build/Windows.md
   - Libbitcoin-protocol:
           - Intro: libbitcoin-protocol/intro.md
   - Libbitcoin-server:
