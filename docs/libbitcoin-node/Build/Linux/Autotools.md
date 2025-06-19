@@ -1,6 +1,6 @@
 # Linux Autotools Build
 
-The libbitcoin-node library can be build either [dynamic](/docs/libbitcoin-node/Build/Linux/Autotools.md#dynamic) or [static](/docs/libbitcoin-node/Build/Linux/Autotools.md#static).
+The libbitcoin-node library can be build either dynamic or static.
 
 GCC and Clang are officially supported.
 The following steps assume you have either of these installed.
