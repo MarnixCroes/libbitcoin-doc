@@ -55,7 +55,10 @@ nav:
         - Autotools: libbitcoin-node/Build/Linux/Autotools.md
         - CMake List: libbitcoin-node/Build/Linux/CMakeList.md
         - CMake Preset: libbitcoin-node/Build/Linux/CMakePreset.md
-      - macOS: libbitcoin-node/Build/macOS.md
+      - macOS:
+        - Intro: libbitcoin-node/Build/macOS/Intro.md
+        - Autotools: libbitcoin-node/Build/macOS/Autotools.md
+        - CMake: libbitcoin-node/Build/macOS/CMake.md
       - Windows: libbitcoin-node/Build/Windows.md
   - Libbitcoin-protocol:
           - Intro: libbitcoin-protocol/intro.md
