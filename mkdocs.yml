@@ -59,7 +59,9 @@ nav:
         - Intro: libbitcoin-node/Build/macOS/Intro.md
         - Autotools: libbitcoin-node/Build/macOS/Autotools.md
         - CMake: libbitcoin-node/Build/macOS/CMake.md
-      - Windows: libbitcoin-node/Build/Windows.md
+      - Windows:
+        - Intro: libbitcoin-node/Build/Windows/Intro.md
+        - MSBuild: libbitcoin-node/Build/Windows/MSBuild.md
   - Libbitcoin-protocol:
           - Intro: libbitcoin-protocol/intro.md
   - Libbitcoin-server:
