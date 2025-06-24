@@ -14,11 +14,11 @@ git clone https://github.com/libbitcoin/libbitcoin-node.git
 
 Navigate to the cloned repository and then execute the install script.
 
-_(.\build.cmd .. ${{ matrix.platform }} ${{ matrix.configuration }} x64 ${{ matrix.version }})_
+_(.\build.cmd .. ${ platform } ${ configuration } x64 ${ version })_
 
 ### Static Debug
 
-Build with the default options and dynamic linking:
+Build with the default options and static linking:
 ```
 .\build.cmd .. x64 StaticDebug x64 vs2022
 ```
