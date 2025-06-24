@@ -35,14 +35,14 @@ It can be either a `dynamic` build or a `static` build:
 
 Build with the default options and dynamic linking:
 ```
-./install.sh --build-dir=/home/libbitcoin-node/ --enable-isystem --prefix=/home/libbitcoin-node/prefix --disable-static --disable-ndebug  --build-boost  --build-secp256k1
+./install.sh --build-dir=/home/user/libbitcoin-node/ --enable-isystem --prefix=/home/user/libbitcoin-node/prefix --disable-static --disable-ndebug  --build-boost  --build-secp256k1
 ```
 
 ### Static
 
 Build with static linking and ICU support:
 ```
-./install.sh --build-dir=/home/runner/work/libbitcoin-node/ --enable-isystem --prefix=/home/runner/work/libbitcoin-node/prefix --disable-shared --enable-ndebug  --build-boost --build-icu --with-icu --build-secp256k1
+./install.sh --build-dir=/home/user/libbitcoin-node/ --enable-isystem --prefix=/home/user/libbitcoin-node/prefix --disable-shared --enable-ndebug  --build-boost --build-icu --with-icu --build-secp256k1
 ```
 
 ---

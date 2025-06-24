@@ -35,14 +35,14 @@ It can be either a `dynamic` build or a `static` build:
 
 Build with the default options and dynamic linking:
 ```
-./install-cmake.sh --build-dir=/home/libbitcoin-node/  --prefix=/home/libbitcoin-node/prefix --disable-static --disable-ndebug -Denable-ndebug=no  --build-boost  --build-secp256k1
+./install-cmake.sh --build-dir=/home/user/libbitcoin-node/  --prefix=/home/user/libbitcoin-node/prefix --disable-static --disable-ndebug -Denable-ndebug=no  --build-boost  --build-secp256k1
 ```
 
 ### Static
 
 Build with static linking and ICU support:
 ```
-./install-cmake.sh --build-dir=/home/libbitcoin-node/  --prefix=/home/libbitcoin-node/prefix --disable-shared --enable-ndebug -Denable-ndebug=yes  --build-boost --build-icu --with-icu --build-secp256k1
+./install-cmake.sh --build-dir=/home/user/libbitcoin-node/  --prefix=/home/user/libbitcoin-node/prefix --disable-shared --enable-ndebug -Denable-ndebug=yes  --build-boost --build-icu --with-icu --build-secp256k1
 ```
 
 ---
