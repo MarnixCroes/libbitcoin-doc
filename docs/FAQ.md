@@ -89,6 +89,8 @@ Libbitcoin has not had such an unintentional fork since it's existence and belie
 
 ### How does a libbitcoin node bootstrap, does it use seed nodes?
 
+> Currently libbitcoin uses the same seed nodes as Bitcoin Core.
+
 By default, a Libbitcoin node will connect to the default DNS names, which point to _libbitcoin.net_ (which currently are offline).
 
 If specified, it will connect to the configured peers, which can be IP addresses or DNS names and port.
