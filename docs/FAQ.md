@@ -194,3 +194,15 @@ No, Libbitcoin does not have a RPC interface.
 
 Libbitcoin Server contains a Client Server Interface, using [ZeroMQ](https://zeromq.org/), that enables queries.
 
+### How to enable the Electrum address index?
+
+To enable the Electrum address index, `address_buckets` & `address_size` need to be edited in the config file.
+
+Any value above 1 will enable the index, however low values could make it very slow.
+
+Possible, recommended, values are:
+
+```
+address_buckets = 1,315,297,540
+address_size = 30,000,000,000
+```
