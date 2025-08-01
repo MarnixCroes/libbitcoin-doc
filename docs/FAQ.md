@@ -132,7 +132,7 @@ Libbitcoin is offically supported and tested on Ubuntu 24.04, latest macOS and l
 
 #### Dependencies
 - Boost: 1.86.0
-- secp256k1: v0.5.1
+- secp256k1: v0.7.0
 - ICU: 55.2 (optional dependency)
 
 #### Hardware
