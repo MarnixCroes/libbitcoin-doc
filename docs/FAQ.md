@@ -196,6 +196,6 @@ Libbitcoin Server contains a Client Server Interface, using [ZeroMQ](https://zer
 
 ### How can I donate to the project?
 
-Currently the best way is to donate to individual contributors.
+Currently, the best way is to donate to individual contributors.
 
 Financial contributions are highly welcome and necessary for some of the contributors.
