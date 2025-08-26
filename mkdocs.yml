@@ -1,5 +1,7 @@
 site_name: Libbitcoin Docs
 copyright: GNU FDL
+repo_url: https://github.com/marnixcroes/libbitcoin-doc
+repo_name: marnixcroes/libbitcoin-doc
 theme:
   name: material
   logo: assets/libbitcoin-logo.svg
