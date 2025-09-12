@@ -10,8 +10,6 @@ Libbitcoin connects to 100 peers and will request and validate block headers fro
 
 Validation will be done of the downloaded blocks after each concurrency. Meaning that, by default, it will download 50k blocks -> validate the blocks -> download the next 50k blocks -> validate, and so forth until the tip.
 
-The downloaded blocks are considered the _candidate chain_, ready for validation.
-
 Validation means doing the consensus checks of each block, including full validation of the scripts and transactions of the blocks.
 
 As a final phase is the _confirmation phase_.
