@@ -1,0 +1,49 @@
+# Linux CMake Preset Build
+
+The libbitcoin-node library can be build either dynamic or static.
+
+GCC and Clang are officially supported.
+The following steps assume you have either of these installed.
+
+To build, follow these steps:
+## Install the required dependencies
+```
+sudo apt-get install git build-essential autoconf automake libtool pkg-config
+```
+{CPU flag could be determined in order to enable hash function optimizations, more information about this will be added to the docs later}
+
+## Clone the repository
+
+```
+git clone https://github.com/libbitcoin/libbitcoin-node.git
+```
+
+## Execute the install script
+
+Navigate to the cloned repository and then execute the install script.
+
+`./install-cmakepresets.sh --help` will display all the options.
+
+It can be either a `dynamic` build or a `static` build:
+
+---
+
+> Change the `build-dir` and `prefix` location if desired and use the desired parameters.
+
+### Dynamic
+
+Debug build with the default options and dynamic linking:
+```
+./install-cmakepresets.sh --build-dir=/home/user/libbitcoin-node/  --prefix=/home/user/libbitcoin-node/prefix/nix-gnu-debug-shared --preset=nix-gnu-debug-shared --disable-static --disable-ndebug -Denable-ndebug=no  --build-boost  --build-secp256k1
+```
+
+### Static
+
+Build with static linking and ICU support:
+```
+  ./install-cmakepresets.sh --build-dir=/home/user/libbitcoin-node/  --prefix=/home/user/libbitcoin-node/prefix/nix-gnu-release-static --preset=nix-gnu-release-static --disable-shared --enable-ndebug -Denable-ndebug=yes  --build-boost --build-icu --with-icu --build-secp256k1
+```
+
+---
+
+The library, and dependent libraries will now be build in the specified directory.
