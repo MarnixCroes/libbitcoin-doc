@@ -219,3 +219,11 @@ Libbitcoin Server contains a Client Server Interface, using [ZeroMQ](https://zer
 Currently, the best way is to donate to individual contributors.
 
 Financial contributions are highly welcome and necessary for some of the contributors.
+
+### What database does Libbitcoin use?
+
+Libbitcoin uses a custom memory mapped (mmap) database.
+
+The store is fully write concurrent, asynchronous and lock free.
+
+It allows to use all the cores, meaning that the entire store can remain in memory if sufficient RAM is available.
