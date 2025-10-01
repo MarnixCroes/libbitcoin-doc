@@ -1,48 +1,49 @@
-name: Deploy MkDocs to GitHub Pages
-
+name: Build GitHub Pages
 on:
   push:
     branches:
       - master
-
+    paths:
+      - 'libbitcoin-doc/**'
+  workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
-
+ 
 jobs:
-  build:
+  build_mkdocs:
     runs-on: ubuntu-latest
+ 
     steps:
-      - name: Check out code
+      - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-
-      - name: Install dependencies
-        run: pip install mkdocs mkdocs-material
-
-      - name: Build MkDocs site
-        run: mkdocs build --strict
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
         with:
-          path: site
-
-  deploy:
-    needs: build
-    permissions:
-      pages: write
-      id-token: write
+          python-version: 3.9
+      - run: pip install \
+            mkdocs-material
+      - run: mkdocs gh-deploy --config-file libbitcoin-doc/mkdocs.yml --force
+ 
+  deploy_mkdocs:
+    needs: build_mkdocs
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
