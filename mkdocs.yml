@@ -44,7 +44,19 @@ nav:
   - Libbitcoin-client:
           - Intro: libbitcoin-client/intro.md
   - Libbitcoin-database:
-          - Intro: libbitcoin-database/intro.md
+    - Intro: libbitcoin-database/intro.md
+    - Build:
+      - Linux: 
+        - Autotools: libbitcoin-database/Build/Linux/Autotools.md
+        - CMake List: libbitcoin-database/Build/Linux/CMakeList.md
+        - CMake Preset: libbitcoin-database/Build/Linux/CMakePreset.md
+      - macOS:
+        - Intro: libbitcoin-database/Build/macOS/Intro.md
+        - Autotools: libbitcoin-database/Build/macOS/Autotools.md
+        - CMake: libbitcoin-database/Build/macOS/CMake.md
+      - Windows:
+        - Intro: libbitcoin-database/Build/Windows/Intro.md
+        - MSBuild: libbitcoin-database/Build/Windows/MSBuild.md
   - Libbitcoin-explorer:
           - Intro: libbitcoin-explorer/intro.md
           - Commands: libbitcoin-explorer/commands.md
