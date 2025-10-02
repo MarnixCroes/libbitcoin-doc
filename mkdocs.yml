@@ -81,7 +81,12 @@ nav:
   - Libbitcoin-server:
           - Intro: libbitcoin-server/intro.md
   - Libbitcoin-system:
-          - Intro: libbitcoin-system/intro.md
+      - Intro: libbitcoin-system/intro.md
+      - Build:
+        - Linux: 
+          - Autotools: libbitcoin-system/Build/Linux/Autotools.md
+          - CMake List: libbitcoin-system/Build/Linux/CMakeList.md
+          - CMake Preset: libbitcoin-system/Build/Linux/CMakePreset.md
 
 markdown_extensions:
   - admonition
