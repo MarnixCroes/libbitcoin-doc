@@ -87,6 +87,13 @@ nav:
           - Autotools: libbitcoin-system/Build/Linux/Autotools.md
           - CMake List: libbitcoin-system/Build/Linux/CMakeList.md
           - CMake Preset: libbitcoin-system/Build/Linux/CMakePreset.md
+        - macOS:
+          - Intro: libbitcoin-system/Build/macOS/Intro.md
+          - Autotools: libbitcoin-system/Build/macOS/Autotools.md
+          - CMake: libbitcoin-system/Build/macOS/CMake.md
+        - Windows:
+          - Intro: libbitcoin-system/Build/Windows/Intro.md
+          - MSBuild: libbitcoin-system/Build/Windows/MSBuild.md
 
 markdown_extensions:
   - admonition
