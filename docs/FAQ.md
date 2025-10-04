@@ -15,11 +15,6 @@ Validation means doing the consensus checks of each block, including full valida
 As a final phase is the _confirmation phase_.
 This does the fully ordered check of the full chain. For example, no double spends across the chain.
 
-### Does Libbitcoin support Taproot?
-
-No, Taproot is currently not supported.
-This is on the roadmap.
-
 ### How is Libbitcoin different from Bitcoin Core?
 
 _Libbitcoin_ and _Bitcoin Core_ are two different implementations of the Bitcoin protocol.
