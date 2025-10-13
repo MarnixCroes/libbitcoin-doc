@@ -1,6 +1,6 @@
-# Linux CMake List Build
+# Linux Autotools Build
 
-The libbitcoin-system library can be build either dynamic or static.
+The libbitcoin-protocol library can be build either dynamic or static.
 
 GCC and Clang compilers are officially supported.
 The following steps assume you have either of these installed.
@@ -23,7 +23,7 @@ git clone https://github.com/libbitcoin/libbitcoin-protocol.git
 
 Navigate to the cloned repository and then execute the install script.
 
-`./install-cmake.sh --help` will display all the options.
+`./install.sh --help` will display all the options.
 
 It can be either a `dynamic` build or a `static` build:
 
@@ -35,14 +35,14 @@ It can be either a `dynamic` build or a `static` build:
 
 Build with the default options and dynamic linking:
 ```
-./install-cmake.sh --build-dir=/home/user/libbitcoin-protocol/  --prefix=/home/user/libbitcoin-protocol/prefix --disable-static --disable-ndebug -Denable-ndebug=no  --build-boost  --build-secp256k1 --build-zmq
+./install.sh --build-dir=/home/user/libbitcoin-protocol/ --enable-isystem --prefix=/home/user/libbitcoin-protocol/prefix --disable-static --disable-ndebug  --build-boost  --build-secp256k1 --build-zmq
 ```
 
 ### Static
 
 Build with static linking and ICU support:
 ```
-./install-cmake.sh --build-dir=/home/user/libbitcoin-protocol/  --prefix=/home/user/libbitcoin-protocol/prefix --disable-shared --enable-ndebug -Denable-ndebug=yes  --build-boost --build-icu --with-icu --build-secp256k1 --build-zmq
+./install.sh --build-dir=/home/user/libbitcoin-protocol/ --enable-isystem --prefix=/home/user/libbitcoin-protocol/prefix --disable-shared --enable-ndebug  --build-boost --build-icu --with-icu --build-secp256k1 --build-zmq
 ```
 
 ---
