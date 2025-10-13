@@ -8,7 +8,7 @@ The following steps assume you have it installed.
 To build, follow these steps:
 ## Install the required dependencies
 ```
-brew install autoconf automake libtool llvm@16 icu4c
+brew install autoconf automake libtool icu4c
 ```
 
 {CPU flag could be determined in order to enable hash function optimizations, more information about this will be added to the docs later}
