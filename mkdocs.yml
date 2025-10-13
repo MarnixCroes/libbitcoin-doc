@@ -61,7 +61,20 @@ nav:
           - Intro: libbitcoin-explorer/intro.md
           - Commands: libbitcoin-explorer/commands.md
   - Libbitcoin-network:
-          - Intro: libbitcoin-network/intro.md
+    - Intro: libbitcoin-network/intro.md
+    - Build:
+      - Linux: 
+        - Intro: libbitcoin-network/Build/Linux/Intro.md
+        - Autotools: libbitcoin-network/Build/Linux/Autotools.md
+        - CMake List: libbitcoin-network/Build/Linux/CMakeList.md
+        - CMake Preset: libbitcoin-network/Build/Linux/CMakePreset.md
+      - macOS:
+        - Intro: libbitcoin-network/Build/macOS/Intro.md
+        - Autotools: libbitcoin-network/Build/macOS/Autotools.md
+        - CMake: libbitcoin-network/Build/macOS/CMake.md
+      - Windows:
+        - Intro: libbitcoin-network/Build/Windows/Intro.md
+        - MSBuild: libbitcoin-network/Build/Windows/MSBuild.md
   - Libbitcoin-node:
     - Intro: libbitcoin-node/intro.md
     - Build:
