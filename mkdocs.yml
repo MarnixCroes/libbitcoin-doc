@@ -90,7 +90,12 @@ nav:
         - Intro: libbitcoin-node/Build/Windows/Intro.md
         - MSBuild: libbitcoin-node/Build/Windows/MSBuild.md
   - Libbitcoin-protocol:
-          - Intro: libbitcoin-protocol/intro.md
+      - Intro: libbitcoin-protocol/intro.md
+      - Build:
+        - Linux:
+          - Autotools: libbitcoin-protocol/Build/Linux/Autotools.md
+          - CMake List: libbitcoin-protocol/Build/Linux/CMakeList.md
+          - CMake Preset: libbitcoin-protocol/Build/Linux/CMakePreset.md
   - Libbitcoin-server:
           - Intro: libbitcoin-server/intro.md
   - Libbitcoin-system:
