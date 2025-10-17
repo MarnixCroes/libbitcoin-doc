@@ -3,7 +3,7 @@
  Instructions how to run a Libbitcoin node
 
 !!! warning
-    Running a Libbitcoin node by using `bn` should only be used by developers/for testing purposes. A Libbitcoin Server should be run for production, it contains the Bitcoin node and address indexing and a client-server interface._
+    Running a Libbitcoin node by using `bn.exe` should only be used by developers/for testing purposes. A Libbitcoin Server should be run for production, it contains the Bitcoin node and address indexing and a client-server interface._
 
 > This guide is for people who want to test Libbitcoin v4
 ## Windows
@@ -16,7 +16,7 @@ Clone the libbitcoin-node repository:
 
 `git clone https://github.com/libbitcoin/libbitcoin-node.git`
 
-In the libbitcoin-node root directory, execute the install script:
+In the libbitcoin-node root directory, execute the build script:
 
 `.\build.cmd .. x64 StaticRelease x64 vs2022`
 
