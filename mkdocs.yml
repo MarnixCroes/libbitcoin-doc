@@ -34,10 +34,19 @@ nav:
   - FAQ: FAQ.md
   - Guides: 
     - Running Libbitcoin:
-      - Run Libbitcoin Node: guides/RunningLibbitcoin/RunNode.md
-      - Download & Install: guides/RunningLibbitcoin/Download&Install.md
-      - Build From Source: guides/RunningLibbitcoin/BuildFromSource.md
-      - Configuration Options: guides/ConfigurationOptions.md
+      - Linux:
+        - Build Source: guides/RunningLibbitcoin/Linux/BuildFromSource.md
+        - Download & Install: guides/RunningLibbitcoin/Linux/Download&Install.md
+        - Run Node: guides/RunningLibbitcoin/Linux/RunNode.md
+      - macOS: 
+        - Build Source: guides/RunningLibbitcoin/macOS/BuildFromSource.md
+        - Download & Install: guides/RunningLibbitcoin/macOS/Download&Install.md
+        - Run Node: guides/RunningLibbitcoin/macOS/RunNode.md
+      - Windows:
+        - Build Source: guides/RunningLibbitcoin/Windows/BuildFromSource.md
+        - Download & Install: guides/RunningLibbitcoin/Windows/Download&Install.md
+        - Run Node: guides/RunningLibbitcoin/Windows/RunNode.md
+    - Configuration Options: guides/ConfigurationOptions.md
     - Electrum: guides/Electrum.md
   - Libbitcoin-build:
           - Intro: libbitcoin-build/intro.md

@@ -1,1 +1,1 @@
-# Rund Libbitcoin Node
+# Run Libbitcoin Node
