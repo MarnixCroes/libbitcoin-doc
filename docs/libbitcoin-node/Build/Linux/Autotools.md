@@ -31,6 +31,8 @@ It can be either a `dynamic` build or a `static` build:
 
 > Change the `build-dir` and `prefix` location if desired and use the desired parameters.
 
+> The default build directory is /user/local. However, creating diretories usually requires (sudo) privileges. Which is why `build-dir` and `prefix` are set.
+
 ### Dynamic
 
 Build with the default options and dynamic linking:
