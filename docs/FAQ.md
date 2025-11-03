@@ -205,9 +205,9 @@ These functionalities in the `libbitcoin-system` library may be used by develope
 
 ### Does Libbitcoin have a RPC interface?
 
-No, Libbitcoin does not have a RPC interface.
-
-Libbitcoin Server contains a Client Server Interface, using [ZeroMQ](https://zeromq.org/), that enables queries.
+Yes.
+Libbitcoin supports HTTP, which includes: web, REST and JSON-RPC.
+It is currently a work in progress.
 
 ### How can I donate to the project?
 
