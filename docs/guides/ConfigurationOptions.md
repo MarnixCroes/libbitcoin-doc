@@ -6,7 +6,7 @@ There is one configuration file for the Client stack and one configuration file 
 
 As the v4 Server is currently still a WIP and only the node can be run, the Node config file is used here.
 
-A Libbitcoin node has one configuration file, separated in 6 sections: bitcoin, database, forks, log, network, node.
+A Libbitcoin node has one configuration file, separated in 14 sections: bitcoin, bitcoind, database, electrum, explore, forks, log, network, node, socket, stratum_v1, stratum_v2, web, websocket.
 All config options have a comment with description and the default value.
 
 ```
