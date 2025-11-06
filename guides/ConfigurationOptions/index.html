@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
@@ -3402,51 +3402,67 @@
 
 <h1 id="configuration-options">Configuration Options</h1>
 <p>There is one configuration file for the Client stack and one configuration file for the Server stack.</p>
+<p>Currently there is no default path for the configuration file, so it needs to be specified with <code>--config</code> or <code>-c</code> at start up.</p>
 <h2 id="libbitcoin-server-node-configuration">Libbitcoin Server (node) configuration</h2>
 <p>As the v4 Server is currently still a WIP and only the node can be run, the Node config file is used here.</p>
-<p>A Libbitcoin node has one configuration file, separated in 6 sections: bitcoin, database, forks, log, network, node.
+<p>The config file needs to be created manually, called <code>bn.cfg</code>.</p>
+<p>A Libbitcoin node has one configuration file, separated in 14 sections: bitcoin, bitcoind, database, electrum, explore, forks, log, network, node, socket, stratum_v1, stratum_v2, web, websocket.
 All config options have a comment with description and the default value.</p>
 <pre><code># Libbitcoin Node configuration file
 
 [bitcoin]
-# The activation time for bip16 in unix time, defaults to 1333238400.
+# The activation time for bip16 in unix time, defaults to '1333238400'.
 bip16_activation_time = &lt;value&gt;
-# The number of blocks considered for bip34 style soft fork activation, defaults to 1000.
+# The number of blocks considered for bip34 style soft fork activation, defaults to '1000'.
 bip34_activation_sample = &lt;value&gt;
-# The number of new version blocks required for bip34 style soft fork activation, defaults to 750.
+# The number of new version blocks required for bip34 style soft fork activation, defaults to '750'.
 bip34_activation_threshold = &lt;value&gt;
-# The number of new version blocks required for bip34 style soft fork enforcement, defaults to 950.
+# The number of new version blocks required for bip34 style soft fork enforcement, defaults to '950'.
 bip34_enforcement_threshold = &lt;value&gt;
-# The block height to freeze the bip34 softfork for bip90, defaults to 227931.
+# The block height to freeze the bip34 softfork for bip90, defaults to '227931'.
 bip34_freeze = &lt;value&gt;
-# The block height to freeze the bip65 softfork for bip90, defaults to 388381.
+# The block height to freeze the bip65 softfork for bip90, defaults to '388381'.
 bip65_freeze = &lt;value&gt;
-# The block height to freeze the bip66 softfork for bip90, defaults to 363725.
+# The block height to freeze the bip66 softfork for bip90, defaults to '363725'.
 bip66_freeze = &lt;value&gt;
-# The hash:height checkpoint for bip9 bit0 activation, defaults to 000000000000000004a1b34462cb8aeebd5799177f7a29cf28f2d1961716b5b5:419328.
+# The hash:height checkpoint for bip9 bit0 activation, defaults to '000000000000000004a1b34462cb8aeebd5799177f7a29cf28f2d1961716b5b5:419328'.
 bip9_bit0_active_checkpoint = &lt;value&gt;
-# The target block period, defaults to 600.
+# The target block period, defaults to '600'.
 block_spacing_seconds = &lt;value&gt;
 # The blockchain checkpoints, defaults to the consensus set.
 checkpoint = &lt;value&gt;
-# The genesis block, defaults to mainnet.
+# The hexideciaml encoding of the genesis block, defaults to mainnet.
 genesis_block = &lt;value&gt;
-# The initial block subsidy, defaults to 50.
+# The initial block subsidy, defaults to '50'.
 initial_block_subsidy_bitcoin = &lt;value&gt;
-# A block presumed to be valid but not required to be present, defaults to 000000000000000000010538edbfd2d5b809a33dd83f284aeea41c6d0d96968a:900000.
+# A block presumed to be valid but not required to be present, defaults to '000000000000000000010538edbfd2d5b809a33dd83f284aeea41c6d0d96968a:900000'.
 milestone = &lt;value&gt;
-# The minimum work for any branch to be considered valid, defaults to 000000000000000000000000000000000000000052b2559353df4117b7348b64.
+# The minimum work for any branch to be considered valid, defaults to '000000000000000000000000000000000000000052b2559353df4117b7348b64'.
 minimum_work = &lt;value&gt;
-# The proof of work limit, defaults to 486604799.
+# The proof of work limit, defaults to '486604799'.
 proof_of_work_limit = &lt;value&gt;
-# The difficulty retargeting factor, defaults to 4.
+# The difficulty retargeting factor, defaults to '4'.
 retargeting_factor = &lt;value&gt;
-# The difficulty retargeting period, defaults to 1209600.
+# The difficulty retargeting period, defaults to '1209600'.
 retargeting_interval_seconds = &lt;value&gt;
-# The subsidy halving period, defaults to 210000.
+# The subsidy halving period, defaults to '210000'.
 subsidy_interval = &lt;value&gt;
-# The future timestamp allowance, defaults to 7200.
+# The future timestamp allowance, defaults to '7200'.
 timestamp_limit_seconds = &lt;value&gt;
+
+[bitcoind]
+# IP address to bind, multiple allowed, defaults to '0.0.0.0:8380' (all IPv4).
+bind = &lt;value&gt;
+# The required maximum number of connections, defaults to '0'.
+connections = &lt;value&gt;
+# The host name (http verification), multiple allowed, defaults to empty (disabled).
+host = &lt;value&gt;
+# The service requires TLS (not implemented), defaults to 'false'.
+secure = &lt;value&gt;
+# The server name (http header), defaults to 'libbitcoin/4.0'.
+server = &lt;value&gt;
+# The idle timeout (http keep-alive), defaults to '60'.
+timeout_seconds = &lt;value&gt;
 
 [database]
 # The number of buckets in the address table head, defaults to '1' (0|1 disables).
@@ -3548,185 +3564,267 @@ validated_tx_rate = &lt;value&gt;
 # The minimum allocation of the validated_tx table body, defaults to '1'.
 validated_tx_size = &lt;value&gt;
 
+[electrum]
+# IP address to bind, multiple allowed, defaults to '0.0.0.0:8480' (all IPv4).
+bind = &lt;value&gt;
+# The required maximum number of connections, defaults to '0'.
+connections = &lt;value&gt;
+# The service requires TLS (not implemented), defaults to 'false'.
+secure = &lt;value&gt;
+# The idle timeout (http keep-alive), defaults to '60'.
+timeout_seconds = &lt;value&gt;
+
+[explore]
+# IP address to bind, multiple allowed, defaults to '0.0.0.0:8180' (all IPv4).
+bind = &lt;value&gt;
+# The required maximum number of connections, defaults to '0'.
+connections = &lt;value&gt;
+# The path of the default source page, defaults to 'index.html'.
+default = &lt;value&gt;
+# The host name (http verification), multiple allowed, defaults to empty (disabled).
+host = &lt;value&gt;
+# The allowed origin (http verification), multiple allowed, defaults to empty (disabled).
+origin = &lt;value&gt;
+# The required root path of source files to be served, defaults to empty.
+path = &lt;value&gt;
+# The service requires TLS (not implemented), defaults to 'false'.
+secure = &lt;value&gt;
+# The server name (http header), defaults to 'libbitcoin/4.0'.
+server = &lt;value&gt;
+# The idle timeout (http keep-server), defaults to '60'.
+timeout_seconds = &lt;value&gt;
+
 [forks]
-# Add check-sequence-verify op code, defaults to true (soft fork).
+# Add check-sequence-verify op code, defaults to 'true' (soft fork).
 bip112 = &lt;value&gt;
-# Use median time past for locktime, defaults to true (soft fork).
+# Use median time past for locktime, defaults to 'true' (soft fork).
 bip113 = &lt;value&gt;
-# Segregated witness consensus layer, defaults to true (soft fork).
+# Segregated witness consensus layer, defaults to 'true' (soft fork).
 bip141 = &lt;value&gt;
-# Witness version 0 (segwit), defaults to true (soft fork).
+# Witness version 0 (segwit), defaults to 'true' (soft fork).
 bip143 = &lt;value&gt;
-# Prevent dummy value malleability, defaults to true (soft fork).
+# Prevent dummy value malleability, defaults to 'true' (soft fork).
 bip147 = &lt;value&gt;
-# Add pay-to-script-hash processing, defaults to true (soft fork).
+# Add pay-to-script-hash processing, defaults to 'true' (soft fork).
 bip16 = &lt;value&gt;
-# Disallow collision of unspent transaction hashes, defaults to true (soft fork).
+# Disallow collision of unspent transaction hashes, defaults to 'true' (soft fork).
 bip30 = &lt;value&gt;
-# Require coinbase input includes block height, defaults to true (soft fork).
+# Require coinbase input includes block height, defaults to 'true' (soft fork).
 bip34 = &lt;value&gt;
-# Witness version 1 (taproot), defaults to true (soft fork).
+# Witness version 1 (taproot), defaults to 'true' (soft fork).
 bip341 = &lt;value&gt;
-# Validation of taproot script, defaults to true (soft fork).
+# Validation of taproot script, defaults to 'true' (soft fork).
 bip342 = &lt;value&gt;
-# Finite monetary supply, defaults to true (soft fork).
+# Finite monetary supply, defaults to 'true' (soft fork).
 bip42 = &lt;value&gt;
-# Add check-locktime-verify op code, defaults to true (soft fork).
+# Add check-locktime-verify op code, defaults to 'true' (soft fork).
 bip65 = &lt;value&gt;
-# Require strict signature encoding, defaults to true (soft fork).
+# Require strict signature encoding, defaults to 'true' (soft fork).
 bip66 = &lt;value&gt;
-# Add relative locktime enforcement, defaults to true (soft fork).
+# Add relative locktime enforcement, defaults to 'true' (soft fork).
 bip68 = &lt;value&gt;
-# Assume bip34, bip65, and bip66 activation if enabled, defaults to true (hard fork).
+# Assume bip34, bip65, and bip66 activation if enabled, defaults to 'true' (hard fork).
 bip90 = &lt;value&gt;
-# Require difficult blocks, defaults to true (use false for testnet).
+# Require difficult blocks, defaults to 'true' (use false for testnet).
 difficult = &lt;value&gt;
-# Retarget difficulty, defaults to true.
+# Retarget difficulty, defaults to 'true'.
 retarget = &lt;value&gt;
-# Fix target overflow for very low difficulty, defaults to false (hard fork).
+# Fix target overflow for very low difficulty, defaults to 'false' (hard fork).
 retarget_overflow_patch = &lt;value&gt;
-# Use scrypt hashing for proof of work, defaults to false (hard fork).
+# Use scrypt hashing for proof of work, defaults to 'false' (hard fork).
 scrypt_proof_of_work = &lt;value&gt;
-# Fix time warp bug, defaults to false (hard fork).
+# Fix time warp bug, defaults to 'false' (hard fork).
 time_warp_patch = &lt;value&gt;
 
 [log]
-# Enable application logging, defaults to true.
+# Enable application logging, defaults to 'true'.
 application = &lt;value&gt;
-# Enable local fault logging, defaults to true.
+# Enable local fault logging, defaults to 'true'.
 fault = &lt;value&gt;
 # The maximum byte size of each pair of rotated log files, defaults to 1000000.
 maximum_size = &lt;value&gt;
-# Enable news logging, defaults to true.
+# Enable news logging, defaults to 'true'.
 news = &lt;value&gt;
+# Enable objects logging, defaults to 'false'.
+objects = &lt;value&gt;
 # The log files directory, defaults to empty.
 path = &lt;value&gt;
-# Enable protocol logging, defaults to false.
+# Enable protocol logging, defaults to 'false'.
 protocol = &lt;value&gt;
-# Enable proxy logging, defaults to false.
+# Enable proxy logging, defaults to 'false'.
 proxy = &lt;value&gt;
-# Enable quitting logging, defaults to false.
+# Enable quitting logging, defaults to 'false'.
 quitting = &lt;value&gt;
-# Enable remote fault logging, defaults to true.
+# Enable remote fault logging, defaults to 'true'.
 remote = &lt;value&gt;
-# Enable session logging, defaults to true.
+# Enable session logging, defaults to 'true'.
 session = &lt;value&gt;
-# Path to windows debug build symbols file (.pdb).
-symbols = &lt;value&gt;
-# Enable verbose logging, defaults to false.
+# Enable verbose logging, defaults to 'false'.
 verbose = &lt;value&gt;
 
 [network]
-# The lower bound for address selection divisor, defaults to 5.
+# The lower bound for address selection divisor, defaults to '5'.
 address_lower = &lt;value&gt;
-# The upper bound for address selection divisor, defaults to 10.
+# The upper bound for address selection divisor, defaults to '10'.
 address_upper = &lt;value&gt;
-# IP address to bind, multiple entries allowed, defaults to 0.0.0.0:8333.
+# IP address to bind, multiple allowed, defaults to '0.0.0.0:8333' (all IPv4).
 bind = &lt;value&gt;
-# IP address to disallow as a peer, multiple entries allowed.
+# IP address to disallow as a peer, multiple allowed.
 blacklist = &lt;value&gt;
-# The age limit for any connection, defaults to 1440.
+# The age limit for any connection, defaults to '1440'.
 channel_expiration_minutes = &lt;value&gt;
-# The time between ping messages, defaults to 5.
+# The time between ping messages, defaults to '5'.
 channel_heartbeat_minutes = &lt;value&gt;
-# The inactivity time limit for any connection, defaults to 10.
+# The inactivity time limit for any connection, defaults to '10'.
 channel_inactivity_minutes = &lt;value&gt;
-# The number of concurrent attempts to establish one connection, defaults to 5.
+# The number of concurrent attempts to establish one connection, defaults to '5'.
 connect_batch_size = &lt;value&gt;
-# The time limit for connection establishment, defaults to 5.
+# The time limit for connection establishment, defaults to '5'.
 connect_timeout_seconds = &lt;value&gt;
-# Enable address messages, defaults to true.
+# Enable address messages, defaults to 'true'.
 enable_address = &lt;value&gt;
-# Enable address v2 messages, defaults to false.
+# Enable address v2 messages, defaults to 'false'.
 enable_address_v2 = &lt;value&gt;
-# Enable alert messages, defaults to false.
+# Enable alert messages, defaults to 'false'.
 enable_alert = &lt;value&gt;
-# Enable enable compact block messages, defaults to false.
+# Enable enable compact block messages, defaults to 'false'.
 enable_compact = &lt;value&gt;
-# Enable internet protocol version 6 (IPv6), defaults to false.
+# Enable internet protocol version 6 (IPv6), defaults to 'false'.
 enable_ipv6 = &lt;value&gt;
-# Allow connections from the node to itself, defaults to false.
+# Allow connections from the node to itself, defaults to 'false'.
 enable_loopback = &lt;value&gt;
-# Enable reject messages, defaults to false.
+# Enable reject messages, defaults to 'false'.
 enable_reject = &lt;value&gt;
-# Enable transaction relay, defaults to true.
+# Enable transaction relay, defaults to 'true'.
 enable_relay = &lt;value&gt;
-# Enable witness transaction identifier relay, defaults to false.
+# Enable witness transaction identifier relay, defaults to 'false'.
 enable_witness_tx = &lt;value&gt;
-# The time limit to complete the connection handshake, defaults to 30.
+# The time limit to complete the connection handshake, defaults to '30'.
 handshake_timeout_seconds = &lt;value&gt;
-# The maximum number of peer hosts in the pool, defaults to 10000.
+# The maximum number of peer hosts in the pool, defaults to '10000'.
 host_pool_capacity = &lt;value&gt;
-# The magic number for message headers, defaults to 3652501241.
+# The magic number for message headers, defaults to '3652501241'.
 identifier = &lt;value&gt;
-# The target number of incoming network connections, defaults to 100.
+# The target number of incoming network connections, defaults to '100'.
 inbound_connections = &lt;value&gt;
-# The advertised services that cause a peer to be dropped, defaults to 176.
+# The advertised services that cause a peer to be dropped, defaults to '176'.
 invalid_services = &lt;value&gt;
-# The maximum allowable channel clock skew, defaults to 120.
+# The maximum allowable channel clock skew, defaults to '120'.
 maximum_skew_minutes = &lt;value&gt;
-# The minimum retained read buffer size, defaults to 4000000.
+# The minimum retained read buffer size, defaults to '4000000'.
 minimum_buffer = &lt;value&gt;
-# The target number of outgoing network connections, defaults to 100.
+# The target number of outgoing network connections, defaults to '100'.
 outbound_connections = &lt;value&gt;
 # The peer address cache file directory, defaults to empty.
 path = &lt;value&gt;
-# A persistent peer node, multiple entries allowed.
+# A persistent peer node, multiple allowed.
 peer = &lt;value&gt;
-# The maximum network protocol version, defaults to 70012.
+# The maximum network protocol version, defaults to '70012'.
 protocol_maximum = &lt;value&gt;
-# The minimum network protocol version, defaults to 31800.
+# The minimum network protocol version, defaults to '31800'.
 protocol_minimum = &lt;value&gt;
 # The peer download rate limit in bytes per second, defaults to 1024 (not implemented).
 rate_limit = &lt;value&gt;
-# The time delay for failed connection retry, defaults to 1.
+# The time delay for failed connection retry, defaults to '1'.
 retry_timeout_seconds = &lt;value&gt;
-# A seed node for initializing the host pool, multiple entries allowed.
+# A seed node for initializing the host pool, multiple allowed.
 seed = &lt;value&gt;
-# The time limit for obtaining seed addresses, defaults to 30.
+# The time limit for obtaining seed addresses, defaults to '30'.
 seeding_timeout_seconds = &lt;value&gt;
-# IP address to advertise, multiple entries allowed.
+# IP address to advertise, multiple allowed.
 self = &lt;value&gt;
-# The maximum services exposed by network connections, defaults to 9 (full node, witness).
+# The maximum services exposed by network connections, defaults to '9' (full node, witness).
 services_maximum = &lt;value&gt;
-# The minimum services exposed by network connections, defaults to 9 (full node, witness).
+# The minimum services exposed by network connections, defaults to '9' (full node, witness).
 services_minimum = &lt;value&gt;
-# The minimum number of threads in the network threadpool, defaults to 16.
+# The minimum number of threads in the network threadpool, defaults to '16'.
 threads = &lt;value&gt;
 # The node user agent string, defaults to '/libbitcoin:4.0.0/'.
 user_agent = &lt;value&gt;
-# Validate the checksum of network messages, defaults to false.
+# Validate the checksum of network messages, defaults to 'false'.
 validate_checksum = &lt;value&gt;
-# IP address to allow as a peer, multiple entries allowed.
+# IP address to allow as a peer, multiple allowed.
 whitelist = &lt;value&gt;
 
 [node]
-# Block deserialization buffer multiple of wire size, defaults to 20 (0 disables).
+# Block deserialization buffer multiple of wire size, defaults to '20' (0 disables).
 allocation_multiple = &lt;value&gt;
-# Allowable underperformance standard deviation, defaults to 1.5 (0 disables).
+# Allowable underperformance standard deviation, defaults to '1.5' (0 disables).
 allowed_deviation = &lt;value&gt;
-# Limit of per channel cached peer block and tx announcements, to avoid replaying (defaults to 42).
+# Limit of per channel cached peer block and tx announcements, to avoid replaying, defaults to '42'.
 announcement_cache = &lt;value&gt;
-# Time from present that blocks are considered current, defaults to 60 (0 disables).
+# Time from present that blocks are considered current, defaults to '60' (0 disables).
 currency_window_minutes = &lt;value&gt;
-# Delay accepting inbound connections until node is current, defaults to true.
+# Delay accepting inbound connections until node is current, defaults to 'true'.
 delay_inbound = &lt;value&gt;
 # Maximum number of blocks to download concurrently, defaults to '50000' (0 disables).
 maximum_concurrency = &lt;value&gt;
 # Maximum block height to populate, defaults to 0 (unlimited).
 maximum_height = &lt;value&gt;
-# Set the validation threadpool to high priority, defaults to true.
-priority = &lt;value&gt;
-# Sampling period for drop of stalled channels, defaults to 10 (0 disables).
+# Set the process to high memory priority, defaults to 'true'.
+memory_priority = &lt;value&gt;
+# Sampling period for drop of stalled channels, defaults to '10' (0 disables).
 sample_period_seconds = &lt;value&gt;
-# The number of threads in the validation threadpool, defaults to 32.
+# Set validation threads to high processing priority, defaults to 'true'.
+thread_priority = &lt;value&gt;
+# The number of threads in the validation threadpool, defaults to '32'.
 threads = &lt;value&gt;
 
-[server]
-# IP address to bind, multiple entries allowed, defaults to 0.0.0.0:8080.
+[socket]
+# IP address to bind, multiple allowed, defaults to '0.0.0.0:8280' (all IPv4).
 bind = &lt;value&gt;
-# The target number of incoming network connections, defaults to 0.
-inbound_connections = &lt;value&gt;
+# The required maximum number of connections, defaults to '0'.
+connections = &lt;value&gt;
+# The host name (http verification), multiple allowed, defaults to empty (disabled).
+host = &lt;value&gt;
+# The server name (http header), defaults to 'libbitcoin/4.0'.
+server = &lt;value&gt;
+# The idle timeout (http keep-alive), defaults to '60'.
+timeout_seconds = &lt;value&gt;
+
+[stratum_v1]
+# IP address to bind, multiple allowed, defaults to '0.0.0.0:8580' (all IPv4).
+bind = &lt;value&gt;
+# The required maximum number of connections, defaults to '0'.
+connections = &lt;value&gt;
+# The service requires TLS (not implemented), defaults to 'false'.
+secure = &lt;value&gt;
+# The idle timeout (http keep-alive), defaults to '60'.
+timeout_seconds = &lt;value&gt;
+
+[stratum_v2]
+# IP address to bind, multiple allowed, defaults to '0.0.0.0:8680' (all IPv4).
+bind = &lt;value&gt;
+# The required maximum number of connections, defaults to '0'.
+connections = &lt;value&gt;
+# The service requires TLS (not implemented), defaults to 'false'.
+secure = &lt;value&gt;
+# The idle timeout (http keep-alive), defaults to '60'.
+timeout_seconds = &lt;value&gt;
+
+[web]
+# IP address to bind, multiple allowed, defaults to '0.0.0.0:8080' (all IPv4).
+bind = &lt;value&gt;
+# The required maximum number of connections, defaults to '0'.
+connections = &lt;value&gt;
+# The path of the default source page, defaults to 'index.html'.
+default = &lt;value&gt;
+# The host name (http verification), multiple allowed, defaults to empty (disabled).
+host = &lt;value&gt;
+# The allowed origin (http verification), multiple allowed, defaults to empty (disabled).
+origin = &lt;value&gt;
+# The required root path of source files to be served, defaults to empty.
+path = &lt;value&gt;
+# The service requires TLS (not implemented), defaults to 'false'.
+secure = &lt;value&gt;
+# The server name (http header), defaults to 'libbitcoin/4.0'.
+server = &lt;value&gt;
+# The idle timeout (http keep-alive), defaults to '60'.
+timeout_seconds = &lt;value&gt;
+
+[websocket]
+# The service requires TLS (not implemented), defaults to 'false'.
+secure = &lt;value&gt;
 </code></pre>
 
 

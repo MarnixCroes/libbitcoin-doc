@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
@@ -3914,7 +3914,7 @@ ZeroMQ is needed for client and/or server.
 ICU (International Components for Unicode) is an optional dependency which is only required when BIP 38 and BIP 39 are being used with libbitcoin-explorer.</p>
 <p><img alt="" src="/assets/dependenciesgraph.png" /></p>
 <h3 id="which-bips-are-supported">Which BIP's are supported?</h3>
-<p>BIP-9, BIP-16*, BIP-21, BIP-30*, BIP-31, BIP-32, BIP-34*, BIP-35, BIP-38, BIP-39, BIP-42*, BIP-61, BIP-65*, BIP-66*, BIP-68*, BIP-90*, BIP-112*, BIP-113*, BIP-130, BIP-133, BIP-141*, BIP-143*, BIP-144, BIP-147*, BIP-152, BIP-155, BIP-157, BIP-341*, BIP-342*.</p>
+<p>BIP-9, BIP-16*, BIP-21, BIP-30*, BIP-31, BIP-32, BIP-34*, BIP-35, BIP-37 (relay flag only), BIP-38, BIP-39, BIP-42*, BIP-61, BIP-65*, BIP-66*, BIP-68*, BIP-90*, BIP-111 (service bit recognized), BIP-112*, BIP-113*, BIP-130, BIP-141*, BIP-143*, BIP-144, BIP-147*, BIP-155, BIP-157, BIP-340, BIP-341*, BIP-342*.</p>
 <p>*soft fork, enabled by default</p>
 <h3 id="does-libbitcoin-support-pruning">Does Libbitcoin support pruning?</h3>
 <p>No, Libbitcoin does not allow to prune the chain.</p>
@@ -4005,8 +4005,9 @@ Users are never forced to accept a fork when upgrading the software.</p>
 <p>To use a Libbitcoin node with a wallet, an Electrum index can be used to connect a wallet.</p>
 </blockquote>
 <h3 id="does-libbitcoin-have-a-rpc-interface">Does Libbitcoin have a RPC interface?</h3>
-<p>No, Libbitcoin does not have a RPC interface.</p>
-<p>Libbitcoin Server contains a Client Server Interface, using <a href="https://zeromq.org/">ZeroMQ</a>, that enables queries.</p>
+<p>Yes.
+Libbitcoin supports HTTP, which includes: web, REST and JSON-RPC.
+It is currently a work in progress.</p>
 <h3 id="how-can-i-donate-to-the-project">How can I donate to the project?</h3>
 <p>Currently, the best way is to donate to individual contributors.</p>
 <p>Financial contributions are highly welcome and necessary for some of the contributors.</p>
