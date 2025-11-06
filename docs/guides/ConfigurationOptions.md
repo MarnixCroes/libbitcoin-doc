@@ -8,6 +8,8 @@ Currently there is no default path for the configuration file, so it needs to be
 
 As the v4 Server is currently still a WIP and only the node can be run, the Node config file is used here.
 
+The config file needs to be created manually, called `bn.cfg`.
+
 A Libbitcoin node has one configuration file, separated in 14 sections: bitcoin, bitcoind, database, electrum, explore, forks, log, network, node, socket, stratum_v1, stratum_v2, web, websocket.
 All config options have a comment with description and the default value.
 
