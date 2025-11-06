@@ -2,6 +2,8 @@
 
 There is one configuration file for the Client stack and one configuration file for the Server stack.
 
+Currently there is no default path for the configuration file, so it needs to be specified with `--config` or `-c` at start up.
+
 ## Libbitcoin Server (node) configuration
 
 As the v4 Server is currently still a WIP and only the node can be run, the Node config file is used here.
