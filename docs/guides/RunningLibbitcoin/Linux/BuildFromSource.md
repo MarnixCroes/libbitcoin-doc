@@ -1,9 +1,9 @@
-# Build Libbitcoin Node from source
+# Build Libbitcoin Server from source
 
- Instructions how to run a Libbitcoin node
+ Instructions on how to run Libbitcoin
 
 !!! warning
-    Running a Libbitcoin node by using `bn` should only be used by developers/for testing purposes. A Libbitcoin Server should be run for production, it contains the Bitcoin node and address indexing and a client-server interface._
+    Libbitcoin v4 is still under development. Use it for testing purposes._
 
 > This guide is for people who want to test Libbitcoin v4
 ## Debian/Ubuntu
@@ -20,11 +20,11 @@ Clone the libbitcoin-node repository and get the build requirements:
 
 In the libbitcoin-node root directory, execute the install script:
 
-`./install.sh --build-dir=/home/user/libbitcoin-node/ --enable-isystem --prefix=/home/user/libbitcoin-node/prefix --disable-static --disable-ndebug  --build-boost  --build-secp256k1`
+`./install.sh --build-dir=/home/user/libbitcoin-server/ --enable-isystem --prefix=/home/user/libbitcoin-server/prefix --disable-static --disable-ndebug  --build-boost  --build-secp256k1`
 
-It will show the libbitcoin-node installer configuration and download and install the dependencies in the specified `--build-dir`.
+It will show the libbtcoin-server installer configuration and download and install the dependencies in the specified `--build-dir`.
 The `--prefix` is where the _bin_, _etc_, _include_ and _lib_ and _share_ directories will be located.
 
-_bin_ contains the `bn` executable, _etc_ contains the _bn.cfg_ file, which is an example config file (changing values here will not take effect).
+_bin_ contains the `bs` executable, _etc_ contains the _bn.cfg_ file, which is an example config file (changing values here will not take effect).
 
-Now run the `bn` executable and the node will start and create outbound connections.
+Now run the `bs` executable and the Libbitcoin server, including a Bitcoin node, will start and create outbound connections.
