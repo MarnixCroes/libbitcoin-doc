@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#macos-autotools-build" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -3696,6 +3701,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autotools
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -3713,6 +3738,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-the-required-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install the required dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clone the repository
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execute-the-install-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execute the install script
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Execute the install script">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Static
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4424,6 +4529,77 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-the-required-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install the required dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clone the repository
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execute-the-install-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execute the install script
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Execute the install script">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Static
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4443,9 +4619,36 @@
   
 
 
-  <h1>Autotools</h1>
-
-
+<h1 id="macos-autotools-build">macOS Autotools Build</h1>
+<p>The libbitcoin-server library can be build either dynamic or static.</p>
+<p>Clang compiler is officially supported.
+The following steps assume you have it installed.</p>
+<p>To build, follow these steps:</p>
+<h2 id="install-the-required-dependencies">Install the required dependencies</h2>
+<pre><code>brew install autoconf automake libtool
+</code></pre>
+<p>{CPU flag could be determined in order to enable hash function optimizations, more information about this will be added to the docs later}</p>
+<h2 id="clone-the-repository">Clone the repository</h2>
+<pre><code>git clone https://github.com/libbitcoin/libbitcoin-server.git
+</code></pre>
+<h2 id="execute-the-install-script">Execute the install script</h2>
+<p>Navigate to the cloned repository and then execute the install script.</p>
+<p><code>./install.sh --help</code> will display all the options.</p>
+<p>It can be either a <code>dynamic</code> build or a <code>static</code> build:</p>
+<hr />
+<blockquote>
+<p>Change the <code>build-dir</code> and <code>prefix</code> location if desired and use the desired parameters.</p>
+</blockquote>
+<h3 id="dynamic">Dynamic</h3>
+<p>Build with the default options and dynamic linking:</p>
+<pre><code>./install.sh --build-dir=/Users/libbitcoin-server/ --enable-isystem --prefix=/Users/libbitcoin-server/prefix --disable-static --enable-ndebug  --build-boost  --build-secp256k1
+</code></pre>
+<h3 id="static">Static</h3>
+<p>Build with static linking:</p>
+<pre><code>./install.sh --build-dir=/Users/libbitcoin-server/ --enable-isystem --prefix=/Users/libbitcoin-server/prefix --disable-shared --enable-ndebug  --build-boost  --build-secp256k1
+</code></pre>
+<hr />
+<p>The library, and dependent libraries will now be build in the specified directory.</p>
 
 
 
