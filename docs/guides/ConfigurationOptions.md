@@ -5,7 +5,11 @@ There is one configuration file for the Client stack and one configuration file 
 Currently there is no default path for the configuration file, so it needs to be specified with `--config` or `-c` at start up.
 
 For example:
+
 `--config=/home/user/Documents/bs.cfg`
+
+or
+
 `-c /home/user/Documents/bs.cfg`
 
 ## Libbitcoin Server (node) configuration
