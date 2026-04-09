@@ -18,7 +18,7 @@ Clone the libbitcoin-node repository:
 
 Get the build requirements:
 
-`brew install autoconf automake libtool icu4c`
+`brew install autoconf automake libtool`
 
 In the libbitcoin-node root directory, execute the install script:
 

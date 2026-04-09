@@ -39,9 +39,9 @@ Debug build with the default options and dynamic linking:
 
 ### Static
 
-Build with static linking and ICU support:
+Build with static linking:
 ```
-./install-cmakepresets.sh --build-dir=/home/user/libbitcoin-system/ -Denable-avx2=on --prefix=/home/user/libbitcoin-system/prefix/nix-gnu-release-static --preset=nix-gnu-release-static --disable-shared --enable-ndebug -Denable-ndebug=yes  --build-boost --build-icu --with-icu --build-secp256k1
+./install-cmakepresets.sh --build-dir=/home/user/libbitcoin-system/ -Denable-avx2=on --prefix=/home/user/libbitcoin-system/prefix/nix-gnu-release-static --preset=nix-gnu-release-static --disable-shared --enable-ndebug -Denable-ndebug=yes  --build-boost --build-secp256k1
 ```
 
 ---
