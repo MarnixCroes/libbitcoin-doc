@@ -65,7 +65,6 @@ Libbitcoin uses as few dependencies as possible:
 
 A minimal libbitcoin build requires boost and libsecp256k1. 
 ZeroMQ is needed for client and/or server.
-ICU (International Components for Unicode) is an optional dependency which is only required when BIP 38 and BIP 39 are being used with libbitcoin-explorer.
 
 ![](/assets/dependenciesgraph.png)
 
@@ -150,7 +149,6 @@ Libbitcoin is offically supported and tested on Ubuntu 24.04, latest macOS and l
 #### Dependencies
 - Boost: 1.86.0
 - secp256k1: v0.7.0
-- ICU: 55.2 (optional dependency)
 
 #### Hardware
 It should run on as low as 8 GiB RAM, however Libbitcoin contributors do not spend time and resources on supporting lower level hardware as this hardware will become obsolete in the near future.
