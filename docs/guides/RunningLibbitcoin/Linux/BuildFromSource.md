@@ -10,7 +10,7 @@
 
 ### Using install.sh
 
-The easiest way to run a libbitcoin node is by cloning the libbitcoin-node repository and then run the install script.
+The easiest way to run the libbitcoin server, which includes a Bitcoin node, is by cloning the libbitcoin-server repository and then run the install script.
 
 Clone the libbitcoin-node repository and get the build requirements:
 
