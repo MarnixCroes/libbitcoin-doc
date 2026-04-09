@@ -1,6 +1,6 @@
-# Run Libbitcoin Node
+# Run Libbitcoin Server
 
-To run the node, execute `bn` and the node will start.
+To run the Server, including a Bitcoin node, execute `bs` and the node will start.
 
 If built according to the _Build From Source_ guide, the executable can be found in the `home/user/libbitcoin-node/prefix/bin` directory.
 
@@ -11,7 +11,7 @@ If built according to the _Build From Source_ guide, the executable can be found
 <br>
 
 ```
-./bn -h
+./bs -h
 ```
 <br>
 
