@@ -40,9 +40,9 @@ Build with the default options and dynamic linking:
 
 ### Static
 
-Build with static linking and ICU support:
+Build with static linking:
 ```
-./install-cmake.sh --build-dir=/home/user/libbitcoin-network/  --prefix=/home/user/libbitcoin-network/prefix --disable-shared --enable-ndebug -Denable-ndebug=yes  --build-boost --build-icu --with-icu --build-secp256k1
+./install-cmake.sh --build-dir=/home/user/libbitcoin-network/  --prefix=/home/user/libbitcoin-network/prefix --disable-shared --enable-ndebug -Denable-ndebug=yes --build-secp256k1
 ```
 
 ---
