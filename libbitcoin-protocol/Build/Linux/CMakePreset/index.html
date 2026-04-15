@@ -4644,8 +4644,8 @@ The following steps assume you have either of these installed.</p>
 <pre><code>./install-cmakepresets.sh --build-dir=/home/user/libbitcoin-protocol/  --prefix=/home/user/libbitcoin-protocol/prefix/nix-gnu-debug-shared --preset=nix-gnu-debug-shared --disable-static --disable-ndebug -Denable-ndebug=no  --build-boost  --build-secp256k1 --build-zmq
 </code></pre>
 <h3 id="static">Static</h3>
-<p>Build with static linking and ICU support:</p>
-<pre><code>./install-cmakepresets.sh --build-dir=/home/user/libbitcoin-protocol/  --prefix=/home/user/libbitcoin-protocol/prefix/nix-gnu-release-static --preset=nix-gnu-release-static --disable-shared --enable-ndebug -Denable-ndebug=yes  --build-boost --build-icu --with-icu --build-secp256k1 --build-zmq
+<p>Build with static linking:</p>
+<pre><code>./install-cmakepresets.sh --build-dir=/home/user/libbitcoin-protocol/  --prefix=/home/user/libbitcoin-protocol/prefix/nix-gnu-release-static --preset=nix-gnu-release-static --disable-shared --enable-ndebug -Denable-ndebug=yes  --build-boost --build-secp256k1 --build-zmq
 </code></pre>
 <hr />
 <p>The library, and dependent libraries will now be build in the specified directory.</p>
